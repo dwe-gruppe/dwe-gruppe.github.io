@@ -18,15 +18,15 @@ function getAllPages(urlPrefix, callback, page, results) {
 }
 
 function getGithubRepos(callback, page, repos) {
-  getAllPages('https://api.github.com/users/yelp/repos', callback);
+  getAllPages('https://api.github.com/users/dwe-gruppe/repos', callback);
 }
 
 function getGithubMembers(callback) {
-  getAllPages('https://api.github.com/orgs/yelp/members', callback);
+  getAllPages('https://api.github.com/orgs/dwe-gruppe/members', callback);
 }
 
 function loadRepositoryData(repoData) {
-  var org = new Organization('yelp');
+  var org = new Organization('dwe-gruppe');
   org.repos = [];
 
   repoData.forEach(function(repoDatum) {
