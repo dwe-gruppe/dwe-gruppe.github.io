@@ -10,7 +10,7 @@ $(document).ready(function() {
 });
 
 function loadRepos(page) {
-  $.getJSON(GH_API_URI + "/orgs/gilt/repos?per_page=100&page=" + page,
+  $.getJSON(GH_API_URI + "/orgs/dwe-gruppe/repos?per_page=100&page=" + page,
     function(result) {
       if (result && result.length > 0) {
         repos = repos.concat(result);
@@ -68,7 +68,7 @@ function addRepos(repos) {
 
   // show repo stats
   var stats = $("#repo-stats").text("Providing ");
-  $("<a>").attr("href", "https://github.com/gilt").text(repos.length + " public repositories").appendTo(stats);
+  $("<a>").attr("href", "https://github.com/dwe-gruppe/").text(repos.length + " public repositories").appendTo(stats);
   stats.removeClass("hidden");
 }
 
@@ -108,10 +108,10 @@ function addRepo(i, repo) {
 }
 
 function updateMembers() {
-  $.getJSON(GH_API_URI + "/orgs/gilt/members?per_page=150", function(result) {
+  $.getJSON(GH_API_URI + "/orgs/dwe-gruppe/members?per_page=150", function(result) {
     if (result && result.length > 0) {
       var stats = $("#member-stats").text("We are ");
-      $("<a>").attr("href", "https://github.com/gilt?tab=members").text(result.length + " members").appendTo(stats);
+      $("<a>").attr("href", "https://github.com/dwe-gruppe/?tab=members").text(result.length + " members").appendTo(stats);
       stats.removeClass("hidden");
 
       // The "Providing N repos" message is designed to be displayed standalone
