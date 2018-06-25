@@ -1,4 +1,4 @@
-# yelp.github.io
+# DWE Gruppe Company Page
 
 Source code for our opensource site showcasing all of our opensource projects.
 
